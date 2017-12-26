@@ -4,23 +4,23 @@ import java.io.Serializable;
 
 import jaraya81.bot.enums.State;
 
-public class Result<T> implements Serializable {
+public class ResultBot<T> implements Serializable {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 2636562495583630849L;
-
+	private static final long serialVersionUID = -1083811937361121475L;
+	
 	private State state;
 	private String description;
 	private Long time;
 	private T object;
 
-	public Result() {
+	public ResultBot() {
 		super();
 	}
 
-	public Result(State state, String description, Long time, T object) {
+	public ResultBot(State state, String description, Long time, T object) {
 		super();
 		this.state = state;
 		this.description = description;

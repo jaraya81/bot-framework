@@ -2,7 +2,7 @@ package jaraya81.bot.enums;
 
 public enum State {
 
-	OK("OK"), ERROR("ERR");
+	OK("OK"), ERROR("ERR"), WAITING("WAITING"), QUEUED("QUEUED");
 	private String code;
 
 	private State(String code) {

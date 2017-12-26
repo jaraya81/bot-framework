@@ -1,13 +1,15 @@
 package jaraya81.bot;
 
-import jaraya81.bot.vo.Result;
+import jaraya81.bot.exception.BotException;
+import jaraya81.bot.vo.ResultActivity;
+import jaraya81.bot.vo.ResultBot;
 
 public interface IBot {
 
-	public <T> Result<T> start() throws Exception;
+	<T> ResultBot<T> flow() throws BotException;
 
-	public <T> Result<T> body() throws Exception;
+	<T> ResultActivity<T> start() throws BotException;
 
-	public <T> Result<T> end() throws Exception;
+	<T> ResultActivity<T> end() throws BotException;
 
 }

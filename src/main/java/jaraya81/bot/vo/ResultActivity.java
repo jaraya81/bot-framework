@@ -6,7 +6,7 @@ import java.util.List;
 
 import jaraya81.bot.enums.State;
 
-public class ListResult<T> implements Serializable {
+public class ResultActivity<T> implements Serializable {
 
 	/**
 	 * 
@@ -17,12 +17,13 @@ public class ListResult<T> implements Serializable {
 	private String description;
 	private Long time;
 	private List<T> listObjects = new ArrayList<T>();
+	private T object;
 
-	public ListResult() {
+	public ResultActivity() {
 		super();
 	}
 
-	public ListResult(State state, String description, Long time, List<T> listObjects) {
+	public ResultActivity(State state, String description, Long time, List<T> listObjects) {
 		super();
 		this.state = state;
 		this.description = description;
@@ -64,5 +65,13 @@ public class ListResult<T> implements Serializable {
 
 	public void setListObjects(List<T> listObjects) {
 		this.listObjects = listObjects;
+	}
+
+	public T getObject() {
+		return object;
+	}
+
+	public void setObject(T object) {
+		this.object = object;
 	}
 }
