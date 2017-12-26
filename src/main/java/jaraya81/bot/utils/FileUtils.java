@@ -19,7 +19,7 @@ public class FileUtils {
 		}
 	}
 
-	public static Double clearTextToDouble(String text, String pattern) {
+	public static Double textToDouble(String text, String pattern) {
 		Matcher m = Pattern.compile(pattern).matcher(text);
 		if (m.find()) {
 			String valueSt = m.group();
