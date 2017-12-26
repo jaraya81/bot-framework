@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import jaraya81.bot.enums.EnumState;
+import jaraya81.bot.enums.State;
 
 public class ListResult<T> implements Serializable {
 
@@ -13,7 +13,7 @@ public class ListResult<T> implements Serializable {
 	 */
 	private static final long serialVersionUID = 4659884102858090771L;
 
-	private EnumState state;
+	private State state;
 	private String description;
 	private Long time;
 	private List<T> listObjects = new ArrayList<T>();
@@ -22,7 +22,7 @@ public class ListResult<T> implements Serializable {
 		super();
 	}
 
-	public ListResult(EnumState state, String description, Long time, List<T> listObjects) {
+	public ListResult(State state, String description, Long time, List<T> listObjects) {
 		super();
 		this.state = state;
 		this.description = description;
@@ -34,11 +34,11 @@ public class ListResult<T> implements Serializable {
 		this.listObjects.add(object);
 	}
 
-	public EnumState getState() {
+	public State getState() {
 		return state;
 	}
 
-	public void setState(EnumState state) {
+	public void setState(State state) {
 		this.state = state;
 	}
 

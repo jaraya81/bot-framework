@@ -2,7 +2,7 @@ package jaraya81.bot.vo;
 
 import java.io.Serializable;
 
-import jaraya81.bot.enums.EnumState;
+import jaraya81.bot.enums.State;
 
 public class Result<T> implements Serializable {
 
@@ -11,7 +11,7 @@ public class Result<T> implements Serializable {
 	 */
 	private static final long serialVersionUID = 2636562495583630849L;
 
-	private EnumState state;
+	private State state;
 	private String description;
 	private Long time;
 	private T object;
@@ -20,7 +20,7 @@ public class Result<T> implements Serializable {
 		super();
 	}
 
-	public Result(EnumState state, String description, Long time, T object) {
+	public Result(State state, String description, Long time, T object) {
 		super();
 		this.state = state;
 		this.description = description;
@@ -28,11 +28,11 @@ public class Result<T> implements Serializable {
 		this.object = object;
 	}
 
-	public EnumState getState() {
+	public State getState() {
 		return state;
 	}
 
-	public void setState(EnumState state) {
+	public void setState(State state) {
 		this.state = state;
 	}
 

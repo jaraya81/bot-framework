@@ -7,19 +7,25 @@ import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jaraya81.bot.enums.ErrorCode;
+import jaraya81.bot.exception.BotException;
+
 public class FileUtils {
 	private static Logger logger = LoggerFactory.getLogger(FileUtils.class);
 
-	public static File getFile(String filePath) throws Exception {
+	public static File getFile(String filePath) throws BotException {
 		if (filePath != null && !filePath.isEmpty()) {
 			logger.info("getFile:" + filePath);
 			return new File(filePath);
 		} else {
-			throw new Exception("filePath IS NULL OR EMPTY");
+			throw new BotException("filePath IS NULL OR EMPTY", ErrorCode.ERROR);
 		}
 	}
 
-	public static Double textToDouble(String text, String pattern) {
+	public static Double textToDouble(String text, String pattern) throws BotException {
+		if (text == null || pattern == null) {
+			throw new BotException("params empty", ErrorCode.ERROR);
+		}
 		Matcher m = Pattern.compile(pattern).matcher(text);
 		if (m.find()) {
 			String valueSt = m.group();

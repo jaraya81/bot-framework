@@ -1,5 +1,5 @@
 package jaraya81.bot.enums;
 
-public enum EnumTipoDriver {
+public enum TipoDriver {
 	HTML_UNIT, CHROME, PHANTOM;
 }
