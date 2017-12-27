@@ -5,6 +5,7 @@ import java.util.Date;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.slf4j.Logger;
@@ -150,7 +151,12 @@ public class BotImpl implements Bot {
 	}
 
 	public Boolean waitFotURLContains(String urlSite, Long timeMax) throws BotException {
+		// TODO HACER
 		throw new BotException("NOT IMPLEMENTED YET", ErrorCode.NOT_IMPLEMENTED);
+	}
+
+	public WebElement findElement(By arg0) {
+		return webDriver.findElement(arg0);
 	}
 
 }

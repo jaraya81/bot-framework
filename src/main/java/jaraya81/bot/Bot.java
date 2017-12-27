@@ -2,7 +2,9 @@ package jaraya81.bot;
 
 import java.io.File;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import jaraya81.bot.exception.BotException;
 
@@ -93,6 +95,8 @@ public interface Bot {
 	 * @throws BotException
 	 */
 	File getFile(String filePath) throws BotException;
+
+	WebElement findElement(By arg0);
 
 	/**
 	 * Cierra el navegador y mata al WebDriver

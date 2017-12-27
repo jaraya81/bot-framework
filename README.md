@@ -6,7 +6,7 @@ Interfaz para implementar un bot.
 * flow() se debe sobreescribir la lógica de negocio para el bot.
 * init() y end() se deben sobreescribir las logicas de interacción de inicio y fin de un bot.
 ```
-public Class BotGoogle implements IBot {
+public class BotGoogle implements IBot {
 }
 ```
 

@@ -31,6 +31,14 @@ public class ResultActivity<T> implements Serializable {
 		this.listObjects = listObjects;
 	}
 
+	public ResultActivity(State state, String description, Long time, T object) {
+		super();
+		this.state = state;
+		this.description = description;
+		this.time = time;
+		this.object = object;
+	}
+
 	public void addList(T object) {
 		this.listObjects.add(object);
 	}

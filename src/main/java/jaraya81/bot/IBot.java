@@ -6,7 +6,7 @@ import jaraya81.bot.vo.ResultBot;
 
 public interface IBot {
 
-	<T> ResultBot<T> flow() throws BotException;
+	<T> ResultBot<T> flowRun() throws BotException;
 
 	<T> ResultActivity<T> start() throws BotException;
 
